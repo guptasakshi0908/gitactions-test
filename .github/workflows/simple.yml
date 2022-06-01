@@ -8,3 +8,15 @@ jobs:
     steps:
       - name: echo a string
         run: echo  "Hello World"
+      - name: run a python command
+        run: |
+          import platform
+          print(platform.processor())
+  
+  create-second-job:
+    runs-on: windows-latest
+    steps:
+      - name: Directory Bash
+        run: pwd
+        shell: bash
+        
