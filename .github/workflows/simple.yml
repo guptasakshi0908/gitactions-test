@@ -5,6 +5,6 @@ on: push
 jobs:
   create-first-job:
     runs-on: ubuntu-latest
-      steps:
-        - name: echo a string
-          run: echo  "Hello World"
+    steps:
+      - name: echo a string
+        run: echo  "Hello World"
