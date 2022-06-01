@@ -6,5 +6,13 @@ jobs:
   run-checkout-actions:
     runs-on: ubuntu-latest
     steps:
+      - name: List files before checkout
+        run: |
+          ls -a
+          pwd
       - name: checkout usage
         run: actions/checkout@v1
+      - name: List files after checkout
+        run: |
+          ls -a
+          pwd
