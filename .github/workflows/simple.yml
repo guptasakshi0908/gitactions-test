@@ -12,6 +12,7 @@ jobs:
         run: |
           import platform
           print(platform.processor())
+        shell: python
   
   create-second-job:
     runs-on: windows-latest
