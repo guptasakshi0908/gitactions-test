@@ -1,0 +1,15 @@
+name: Second worflow
+
+on: push
+
+jobs:
+  use-a-js-action:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Simple js actions
+        id: greet
+        uses: actions/hello-world-javascript-action@main
+        with:
+          who-to-greet: 'Sakshi'
+      - name: output of actions
+        run: echo "${{steps.greet.outputs.time}}"
