@@ -7,10 +7,10 @@ jobs:
     steps:
       - name: list files
         run: |
-        ls -a
-        pwd
-        echo "${{GITHUB_ACTOR}}"
-        echo "${{GITHUB_SHA}}"
-        echo "${{GITHUB_JOB}}"
-        echo "${{GITHUB_REPOSITORY}}"
-        echo "${{GITHUB_WORKSPACE}}"
+          ls -a
+          pwd
+          echo "${{GITHUB_ACTOR}}"
+          echo "${{GITHUB_SHA}}"
+          echo "${{GITHUB_JOB}}"
+          echo "${{GITHUB_REPOSITORY}}"
+          echo "${{GITHUB_WORKSPACE}}"
