@@ -15,3 +15,5 @@ jobs:
         run: echo "$greet"
         env:
           greet: Amit Shah
+      - name: greet all
+        run: env
