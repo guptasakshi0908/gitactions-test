@@ -1,18 +1,16 @@
 name: print greeting messages
 on: push
-env: 
-  greet: PM Modi
 
-jobs: 
-  greet-everyone:
+jobs:
+  use-predefined-git-variables:
     runs-on: ubuntu-latest
-    env:
-      greet: Irani
     steps:
-      - name: greet job
-        if: ${{env.greet == 'Irani'}}
-        run: echo "Good Morning $greet"
-      - name: greet job another
-        run: echo "$greet"
-        env:
-          greet: Amit Shah
+      - name: list files
+        run: |
+        ls -a
+        pwd
+        echo "${{GITHUB_ACTOR}}"
+        echo "${{GITHUB_SHA}}"
+        echo "${{GITHUB_JOB}}"
+        echo "${{GITHUB_REPOSITORY}}"
+        echo "${{GITHUB_WORKSPACE}}"
