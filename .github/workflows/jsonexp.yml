@@ -1,12 +1,17 @@
-name: print
+name: print greeting messages
 on: push
 env: 
-  continue: true
-  time: 3
-jobs:
-  job1:
+  greet: PM Modi
+
+jobs: 
+  greet-everyone:
     runs-on: ubuntu-latest
+    env:
+      greet: Irani
     steps:
-      - continue-on-error: ${{ fromJSON(env.continue) }}
-        timeout-minutes: ${{ fromJSON(env.time) }}
-        run: echo ...
+      - name: greet job
+        run: echo "$greet"
+      - name: greet job another
+        run: echo "$greet"
+        env:
+          greet: Amit Shah
