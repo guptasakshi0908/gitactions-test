@@ -10,10 +10,9 @@ jobs:
       greet: Irani
     steps:
       - name: greet job
-        run: echo "$greet"
+        if: ${{env.greet == 'Irani'}}
+        run: echo "Good Morning $greet"
       - name: greet job another
         run: echo "$greet"
         env:
           greet: Amit Shah
-      - name: greet all
-        run: env
